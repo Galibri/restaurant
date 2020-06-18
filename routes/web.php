@@ -28,7 +28,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     Route::view('/', 'admin.dashboard.index')->name('dashboard');
 
-    Route::view('/foods', 'admin.foods.index')->name('foods');
-    
+    Route::resource('/slider', 'SliderController');
 
 });
