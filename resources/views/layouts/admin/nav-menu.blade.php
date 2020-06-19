@@ -52,7 +52,7 @@ Tip 2: you can also add an image using data-image tag
         </li>
         {{-- Dropdown Menu end --}}
         {{-- Dropdown Menu --}}
-        <li class="nav-item has-treeview">
+        <li class="nav-item has-treeview  {{ request()->routeIs('admin.category.*') ? 'active' : '' }}">
             <a href="#" class="nav-link">
                 <i class="material-icons">api</i>
                 <p>
@@ -61,15 +61,15 @@ Tip 2: you can also add an image using data-image tag
                 </p>
             </a>
             <ul class="nav nav-treeview d-none">
-                <li class="nav-item">
-                    <a href="category.php" class="nav-link">
-                        <i class="material-icons">trip_origin</i>
+                <li class="nav-item {{ request()->routeIs('admin.category.index') ? 'active' : '' }}">
+                    <a href="{{ route('admin.category.index') }}" class="nav-link">
+                        <i class="material-icons">arrow_right</i>
                         <p>All Categories</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="category.php?action=add" class="nav-link">
-                        <i class="material-icons">trip_origin</i>
+                <li class="nav-item {{ request()->routeIs('admin.category.create') ? 'active' : '' }}">
+                    <a href="{{ route('admin.category.create') }}" class="nav-link">
+                        <i class="material-icons">arrow_right</i>
                         <p>Add New</p>
                     </a>
                 </li>

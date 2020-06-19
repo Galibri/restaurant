@@ -29,5 +29,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::view('/', 'admin.dashboard.index')->name('dashboard');
 
     Route::resource('/slider', 'SliderController');
+    Route::resource('/category', 'CategoryController');
 
 });
