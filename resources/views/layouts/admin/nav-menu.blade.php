@@ -14,8 +14,8 @@ Tip 2: you can also add an image using data-image tag
 </div>
 <div class="sidebar-wrapper">
     <ul class="nav">
-        <li class="nav-item {{ request()->routeIs('front.home') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('front.home') }}" target="_blank">
+        <li class="nav-item {{ request()->routeIs('frontend.index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('frontend.index') }}" target="_blank">
                 <i class="material-icons">home</i>
                 <p>Home</p>
             </a>
@@ -54,7 +54,7 @@ Tip 2: you can also add an image using data-image tag
         {{-- Dropdown Menu --}}
         <li class="nav-item has-treeview  {{ request()->routeIs('admin.category.*') ? 'active' : '' }}">
             <a href="#" class="nav-link">
-                <i class="material-icons">api</i>
+                <i class="material-icons">view_sidebar</i>
                 <p>
                     Categories
                     <i class="material-icons nav-right-icon">keyboard_arrow_left</i>
@@ -76,6 +76,43 @@ Tip 2: you can also add an image using data-image tag
             </ul>
         </li>
         {{-- Dropdown Menu end --}}
+        {{-- Dropdown Menu --}}
+        <li class="nav-item has-treeview  {{ request()->routeIs('admin.food.*') ? 'active' : '' }}">
+            <a href="#" class="nav-link">
+                <i class="material-icons">fastfood</i>
+                <p>
+                    Food Items
+                    <i class="material-icons nav-right-icon">keyboard_arrow_left</i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview d-none">
+                <li class="nav-item {{ request()->routeIs('admin.food.index') ? 'active' : '' }}">
+                    <a href="{{ route('admin.food.index') }}" class="nav-link">
+                        <i class="material-icons">arrow_right</i>
+                        <p>All Food items</p>
+                    </a>
+                </li>
+                <li class="nav-item {{ request()->routeIs('admin.food.create') ? 'active' : '' }}">
+                    <a href="{{ route('admin.food.create') }}" class="nav-link">
+                        <i class="material-icons">arrow_right</i>
+                        <p>Add New</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        {{-- Dropdown Menu end --}}
+        <li class="nav-item {{ request()->routeIs('admin.reservation.index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('admin.reservation.index') }}">
+                <i class="material-icons">calendar_today</i>
+                <p>Reservation</p>
+            </a>
+        </li>
+        <li class="nav-item {{ request()->routeIs('admin.contact.index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('admin.contact.index') }}">
+                <i class="material-icons">source</i>
+                <p>Contact</p>
+            </a>
+        </li>
     </ul>
 </div>
 </div>

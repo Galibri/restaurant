@@ -27,9 +27,15 @@
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-dark bg-primary">
         <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;">@yield('page-heading')</a>
-          </div>
+			<div class="navbar-wrapper">
+				<a class="navbar-brand" href="javascript:;">@yield('page-heading')</a>
+			</div>
+			<div class="navbar-wrapper text-right">
+				<form action="{{ route('logout') }}" method="POST">
+					@csrf
+					<button type="submit" class="btn btn-danger btn-sm">Logout</button>
+				</form>
+			</div>
         </div>
       </nav>
       <!-- End Navbar -->
@@ -40,11 +46,11 @@
         <div class="container-fluid">
           <nav class="float-left">
             <ul>
-              <li>
-                <a href="https://galibweb.com">
-                  Pocha Team
-                </a>
-              </li>
+				<li>
+					<a href="https://galibweb.com">
+					GalibWeb
+					</a>
+				</li>
             </ul>
           </nav>
           <div class="copyright float-right">

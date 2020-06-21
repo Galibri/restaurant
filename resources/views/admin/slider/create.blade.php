@@ -37,7 +37,7 @@
 								</div>
 								<div class="row">
 									<div class="col-md-12 my-2">
-										<label for="image" class="bmd-label-floating">Slider Image</label>
+										<label for="image" class="bmd-label-floating">Slider Image</label><br>
 										<input type="file" id="image" name="image">
 									</div>
 								</div>

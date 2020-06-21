@@ -10967,3 +10967,15 @@ ul.nav.nav-treeview .nav-link {
   background: #007D96 !important;
 }
 
+.badge-primary {
+  background-color: #007D96;
+}
+
+.bg-gray {
+  background-color: #f1f1f1;
+}
+
+.stats a {
+  color: #3C4858;
+}
+
