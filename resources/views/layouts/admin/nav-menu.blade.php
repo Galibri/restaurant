@@ -5,11 +5,8 @@ Tip 1: You can change the color of the sidebar using: data-color="purple | azure
 Tip 2: you can also add an image using data-image tag
 -->
 <div class="logo">
-    <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-        CT
-    </a>
-    <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-        Creative Tim
+    <a href="https://galibweb.com/" class="simple-text logo-normal">
+        GalibWeb
     </a>
 </div>
 <div class="sidebar-wrapper">
