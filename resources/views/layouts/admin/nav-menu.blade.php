@@ -106,9 +106,15 @@ Tip 2: you can also add an image using data-image tag
         </li>
         <li class="nav-item {{ request()->routeIs('admin.contact.index') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('admin.contact.index') }}">
-                <i class="material-icons">source</i>
+                <i class="material-icons">mark_email_unread</i>
                 <p>Contact</p>
             </a>
+        </li>
+        <li class="nav-item logout-link">
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="btn-sm nav-link admin-logout-btn btn-block"><i class="material-icons">login</i> Logout</button>
+            </form>
         </li>
     </ul>
 </div>
